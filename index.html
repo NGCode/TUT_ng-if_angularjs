@@ -1,0 +1,23 @@
+<html ng-app>
+    <head>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+        <script type="text/javascript" src="./scripts/controllers.js"></script>
+    </head>
+    
+    <body>
+        <div ng-controller='LoginController'>
+            <form ng-submit="connexion()">
+                <div>Login : <input ng-model="identifiants.login" /></div>
+                <div>Password : <input ng-model="identifiants.password" /></div>
+                
+                <button type="submit">Se connecter</button>
+            </form>
+            
+            <div>
+                <span ng-if="connected">Connexion OK</span>
+                <span ng-if="!connected">Connexion KO</span>
+            </div>
+        </div>
+    </body>
+</html>
